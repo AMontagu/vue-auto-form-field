@@ -1,7 +1,7 @@
 import * as VaffComponents from "./components";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
-import vaffSettingElementStore from "./store/vaffSettingElementStore";
+import vaffStore from "./store/vaffStore";
 import objectPath from 'object-path';
 
 import EnMessage from "./locales/en/index.js";
@@ -61,4 +61,4 @@ const VueAutoFormField = {
 };
 
 export default VueAutoFormField;
-export {VueAutoFormField, vaffSettingElementStore };
+export {VueAutoFormField, vaffStore };

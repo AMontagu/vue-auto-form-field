@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { vaffSettingElementStore } from "../../src";
+import { vaffStore } from "../../src";
 
 Vue.use(Vuex);
 
@@ -9,6 +9,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    vaffStore: vaffSettingElementStore
+    vaffStore: vaffStore
   }
 });

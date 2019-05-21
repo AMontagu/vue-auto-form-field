@@ -8,6 +8,12 @@
       v-model="FieldDataExample.data"
     />
 
+    <vaff-multi-field
+      identifier="test"
+      :field="FieldDataExample.field"
+      v-model="FieldDataExample.data"
+    />
+
     <!-- <vaff-multi-field
 			identifier="test"
 			:field="fieldWithTabs"
