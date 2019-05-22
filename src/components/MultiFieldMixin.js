@@ -37,7 +37,7 @@ export default {
 		},
 		field: { type: [Object, Array], required: true },
 		path: { type: String, default: '' },
-		showDownload: { type: Boolean, default: true },
+		showDownload: { type: Boolean, default: false },
 		showAdd: { type: Boolean, default: true },
 		useDivider: { type: Boolean, default: true },
 		// separate, inline, solo, outline

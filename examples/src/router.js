@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-const VaffMultiField = () => import("./views/VaffMultiField.vue");
+const Vaff = () => import("./views/Vaff.vue");
 const VaffMediaField = () => import("./views/VaffMediaField.vue");
 const VaffDateTimeField = () => import("./views/VaffDateTimeField.vue");
 
@@ -11,9 +11,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/vaff-multi-field",
-      name: "VaffMultiField",
-      component: VaffMultiField
+      path: "/vaff",
+      name: "Vaffd",
+      component: Vaff
     },
     {
       path: "/vaff-media-field",

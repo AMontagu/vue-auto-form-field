@@ -48,7 +48,7 @@ export default new Vuex.Store({
 ```vue
 <template>
   <div>
-    <vaff-multi-field
+    <vaff
       identifier="firstForm"
       :field="fields"
       v-model="data"
@@ -59,7 +59,7 @@ export default new Vuex.Store({
 <script>
 
 export default {
-  name: "vaffMultiFieldView",
+  name: "vaffView",
   data() {
     return {
       fields: {
@@ -80,12 +80,21 @@ export default {
 </script>
 ```
 
-## Vaff options
+## Vaff global options
+
+When you tell vue to use Vaff you can passe some options like this:
+```
+Vue.use(Vaff, {
+    i18n,
+    vaffMediaOptions,
+    vaffUploadOptions
+});
+```
 
 | options  |  description |
-|---|---|---|---|---|
+|---|---|
 |  i18n |  Your vue-i18n instance to adapt text to the good context |
-|  vaffMediaOptions |  Options needed if you want to use VaffMedia and allow user to pick up image, sound, video or file in your dynamically geenrated form. [See VaffMedia options documentation]()    |   |   |   |
+|  vaffMediaOptions |  Options needed if you want to use VaffMedia and allow user to pick up image, sound, video or file in your dynamically generated form. [See VaffMedia options documentation](/components/#media-components)    |   |   |   |
 |  vaffUploadOptions |  Options needed if you want to pass some security when you upload media with VaffMedia (deprecated will be pass in VaffMedia) |
 
 ## Field structure

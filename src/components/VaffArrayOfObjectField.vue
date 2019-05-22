@@ -61,7 +61,7 @@
             v-bind="widthOfItem"
             class="child"
           >
-            <vaff-multi-field
+            <vaff
               v-if="subFieldName !== '_id'"
               v-bind="$props"
               :field="field['@data'][0][subFieldName]"

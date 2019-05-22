@@ -35,7 +35,7 @@
             :key="tabTitle"
           >
             <v-card class="px-2 py-3 borderStyle">
-              <vaff-multi-field
+              <vaff
                 :value="data"
                 :field="subField"
                 :usetabs="false"
@@ -137,13 +137,13 @@
       top
       color="success"
     >
-      {{ $vaffT('vaffMultiField.NewConfigSend') }}
+      {{ $vaffT('vaff.NewConfigSend') }}
       <v-btn
         flat
         color="black"
         @click.native="showSnackbarUpdate = false"
       >
-        {{ $vaffT('vaffMultiField.Close') }}
+        {{ $vaffT('vaff.Close') }}
       </v-btn>
     </v-snackbar>
   </v-layout>
@@ -154,7 +154,7 @@ import MultiFieldMixin from './MultiFieldMixin';
 import { mapGetters } from 'vuex';
 
 export default {
-	name: 'VaffMultiField',
+	name: 'Vaff',
 	mixins: [MultiFieldMixin],
 	props: {
 		usetabs: {

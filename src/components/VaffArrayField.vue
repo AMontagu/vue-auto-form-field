@@ -60,7 +60,7 @@
               sm9
               xs8
             >
-              <vaff-multi-field
+              <vaff
                 v-bind="$props"
                 :path="path ? `${path}.${index}`: index.toString()"
                 @input="emitInputArray(index, $event)"

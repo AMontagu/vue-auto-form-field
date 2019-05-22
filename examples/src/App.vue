@@ -27,8 +27,8 @@ export default {
       navbarItems: [
         {
           icon: "home",
-          text: "vaffMultiField",
-          path: "/vaff-multi-field/",
+          text: "vaff",
+          path: "/vaff/",
           permission: true
         },
         {

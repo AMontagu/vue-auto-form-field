@@ -24,7 +24,7 @@
         :key="subFieldName"
         v-bind="widthOfItem"
       >
-        <vaff-multi-field
+        <vaff
           :field="subField"
           :path="path ? `${path}.${subFieldName}` : subFieldName"
           v-bind="$props"
