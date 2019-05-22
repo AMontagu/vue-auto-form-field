@@ -6,6 +6,7 @@ module.exports = {
 			{ text: 'Guide', link: '/guide/' },
 			{ text: 'Components', link: '/components/' },
 			{ text: 'Fields', link: '/fields/' },
+			{ text: 'Examples', link: '/examples/' },
 		],
 	}
 }
