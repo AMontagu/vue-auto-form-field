@@ -1,5 +1,4 @@
 import { default as VaffField, VaffMediaField } from './VaffField';
-import { default as VaffUpload } from './VaffUpload';
 import VaffArrayField from './VaffArrayField';
 import VaffArrayOfObjectField from './VaffArrayOfObjectField';
 import Vaff from './Vaff';
@@ -12,7 +11,6 @@ Vaff.install = function install(Vue) {
 	Vue.component(VaffMediaField.name, VaffMediaField);
 	Vue.component(Vaff.name, Vaff);
 	Vue.component(VaffObjectField.name, VaffObjectField);
-	Vue.component(VaffUpload.name, VaffUpload);
 };
 
 export {
@@ -22,6 +20,5 @@ export {
 	VaffArrayOfObjectField,
 	VaffMediaField,
 	VaffObjectField,
-	VaffUpload,
 };
 export default Vaff;

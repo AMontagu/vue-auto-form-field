@@ -288,13 +288,14 @@
                 v-if="storage.post"
                 class="mediaAddContainer"
               >
-                <vaff-upload
+                <vaff-media-upload
                   v-if="isPostWithWebSocket(storage)"
                   :ref="`mediaVaffUpload${storage.name}`"
                   :use-web-socket="true"
+                  :headers="storage.headers || {}"
                   @addFile="sendMedia(storage, $event)"
                 />
-                <vaff-upload
+                <vaff-media-upload
                   v-else
                   :ref="`mediaVaffUpload${storage.name}`"
                   :timeout="120000"
@@ -304,6 +305,7 @@
                   name="media"
                   label="Drop your media here"
                   visual-style="zone"
+                  :headers="storage.headers || {}"
                   @onload="onLoadMedia(storage, $event)"
                 />
               </v-flex>
@@ -339,11 +341,11 @@
 import MultiFieldMixin from './VaffMediaMixin';
 import LoggerMixin from '../../LoggerMixin';
 import { mapGetters } from 'vuex';
-import VaffUpload from '../../VaffUpload/VaffUpload.vue';
+import VaffMediaUpload from './VaffMediaUpload.vue';
 
 export default {
 	name: 'VaffMedia',
-	components: { VaffUpload },
+	components: { VaffMediaUpload },
 	mixins: [LoggerMixin, MultiFieldMixin],
 	props: {
 		value: { type: Boolean, required: true },

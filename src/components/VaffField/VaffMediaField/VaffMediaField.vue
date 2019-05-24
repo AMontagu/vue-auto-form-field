@@ -88,7 +88,7 @@
       />
     </div>
     <div v-else>
-      <p>{{ $vaffT('vaffField.vaffMediaField.vaffMediaField.Choose') }}</p>
+      <p>{{ $vaffT('vaffField.vaffMediaField.vaffMediaField.noOptions') }}</p>
     </div>
   </v-layout>
 </template>
