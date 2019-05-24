@@ -117,8 +117,8 @@ export default {
 	},
 	methods: {
 		...mapMutations('vaffStore/', ['setElement']),
-		checkCondition(valueInCondition, valueToCheck, comparaison) {
-			switch (comparaison) {
+		checkCondition(valueInCondition, valueToCheck, comparison) {
+			switch (comparison) {
 				case 'equal':
 					return valueInCondition.toString() === valueToCheck.toString();
 				case 'greater':
