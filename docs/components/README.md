@@ -25,15 +25,15 @@ The props are:
 |---|---|---|---|---|
 |  identifier |  Identifier used as key in vuex store. Helpful fo debug | String | required |
 |  field |  The field object used to construct the form. Its an object or an array composed of one of more field structure. [See field structure documentation](/guide/#field-structure)  | Object, Array  | required |
-|  value |  The value used to fill the form.  [See data structure documentation](/guide/#data-structure) | String, Number, Boolean, Array, Object, Date  | required |
-|  showDownload |  On array of object a download button appear to let you download the data as json file  | Boolean | default: false |
+|  value |  The value used to fill the form.  [See value structure documentation](/guide/#value-structure) | String, Number, Boolean, Array, Object, Date  | required |
+|  showDownload |  On array of object a download button appear to let you download the value as json file  | Boolean | default: false |
 |  showAdd |  Show add button for array. If false that mean you can only edit existing item and not add new. | Boolean | default: true |
 |  useDivider |  Use a visual divider between field | Boolean | default: true |
 |  visualStyle |  Change the visual style of your fields. The possible values are: separate, inline, solo, outline | String | default: "separate" |
 |  itemsPerRow |  Choose how many items you want on a row | Number | default: 1 |
 |  showHeader |  Display header above array and object field to mark separation between multi fields | Boolean | default: true |
 |  headername |  Choose the text for the multi field object if showHeader is true| String | default: "" |
-|  path |  Prop used to keep track of data. You should not use it expect if you now what you are doing. | String | default: "" |
+|  path |  Prop used to keep track of value. You should not use it expect if you now what you are doing. | String | default: "" |
 
 
 Vaff components allow three more props to allow groups field inside a tabulation navbar but its still experimental and not documented. You can see some example to understand how to use it.

@@ -4,8 +4,12 @@ sidebar: auto
 
 # Examples
 
-## String
+## Register
 
-<VaffExample/>
+<VaffRegisterExample/>
+
+## Complex Array
+
+<VaffArrayExample/>
 
 

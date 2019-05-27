@@ -15,24 +15,28 @@
       </div>
     </v-flex>
 
-    <slot
-      :field="field"
-      name="object"
-    >
-      <v-flex
-        v-for="(subField, subFieldName) in (field['@data'] || field)"
-        :key="subFieldName"
-        v-bind="widthOfItem"
+    <v-layout wrap>
+      <slot
+        :field="field"
+        name="object"
       >
-        <vaff
-          :field="subField"
-          :path="path ? `${path}.${subFieldName}` : subFieldName"
-          v-bind="$props"
-          @input="emitInputObjectWhenOnlySubDataChanged(subFieldName, $event)"
-          @deleteMedia="$emit('deleteMedia', $event)"
-        />
-      </v-flex>
-    </slot>
+        <v-flex
+          v-for="(subField, subFieldName) in (field['@data'] || field)"
+          :key="subFieldName"
+          v-bind="widthOfItem"
+          xs6
+        >
+          <vaff
+            :field="subField"
+            :path="path ? `${path}.${subFieldName}` : subFieldName"
+            v-bind="$props"
+            @input="emitInputObjectWhenOnlySubDataChanged(subFieldName, $event)"
+            @deleteMedia="$emit('deleteMedia', $event)"
+            :items-per-rows="itemsPerRow"
+          />
+        </v-flex>
+      </slot>
+    </v-layout>
   </v-layout>
 </template>
 

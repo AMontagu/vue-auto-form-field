@@ -263,6 +263,9 @@ export default {
 	watch: {
 		innerValue(newValue, oldValue) {
 			if (oldValue !== null) {
+				if (this.displayAs('number')) {
+					newValue = parseFloat(newValue)
+        }
 				this.$emit('input', newValue);
 			}
 		},
@@ -380,6 +383,7 @@ export default {
 .input-container {
 	.v-input {
 		margin-top: 0 !important;
+    padding-top: 0 !important;
 	}
 
 	p {

@@ -113,9 +113,9 @@ Each sub json object always has at least 1 key:
 
 **@default:** The default value of the variable when the sub json is in an array. Can be used to define initial value in database if you dynamically create table from field structure.
 
-## Data structure
+## Value structure
 
-The data structure from the field structure. But when field structure need a sub json object data only need the data to map the structure to an actual data.
+The value structure from the field structure. But when field structure need a sub json object data only need the value to map the structure to an actual value.
 
 ## Translation
 

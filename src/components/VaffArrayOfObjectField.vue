@@ -18,7 +18,7 @@
         <v-flex xs8>
           <p
             :class="{'title': $vuetify.breakpoint.xlOnly, 'subheading': $vuetify.breakpoint.lgOnly || $vuetify.breakpoint.mdOnly, 'body-1': $vuetify.breakpoint.smAndDown}"
-            class="ma-0 secondary--text text-truncate text-capitalize textFlex"
+            class="ma-0 text-truncate text-capitalize textFlex"
           >
             {{ ( headername || $getValueTranslated(field["@label"]) || fieldName) | singularize }} <span class="indexBullet ml-2">{{ index + 1 }}</span>
           </p>
@@ -32,12 +32,10 @@
             :class="{'body-1': $vuetify.breakpoint.xlOnly, 'caption': $vuetify.breakpoint.lgAndDown}"
             flat
             small
-            color="secondary"
             @click="removeField(index)"
           >
             <v-icon
               :small="$vuetify.breakpoint.lgAndDown"
-              color="secondary"
               class="mr-2"
             >
               delete
@@ -108,7 +106,7 @@
           slot="activator"
           :medium="$vuetify.breakpoint.xlOnly"
           :small="$vuetify.breakpoint.lgAndDown"
-          color="third white--text"
+          color="indigo darken-2 white--text"
           fab
           depressed
           @click="downloadJSON2CSV"

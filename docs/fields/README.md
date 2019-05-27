@@ -4,57 +4,65 @@ sidebar: auto
 
 # Fields
 
-## Primitive
+## With no options
 
+### Simple input
 > Json
 
 ```json
-"primitive": {
+field:
+{
   "@label": "Primitive Visualization",
   "@hint": "optional",
-  "@default": "string"
 }
+value: "first"
 ```
 > Preview
 
-<img :src="$withBase('/images//visualization/primitive.png')" alt="foo">
+<VaffFieldsExample identifier="1" type="primitive"/>
 
 ------------
 
-## Array
+### Array
 
 > Json
 
 ```json
-"array": {
+field:
+{
   "@label": "Array Visualization",
-  "@default": ["string1", "string2", "string3"]
+  "@default": ["stringAdded"]
 }
+value: ["string1", "string2", "string3"]
 ```
 
 > Preview
 
-<img :src="$withBase('/images//visualization/array.png')" alt="foo">
+<VaffFieldsExample identifier="2" type="array"/>
 
 ------------
 
-## Object
+### Object
 
 > Json
 
 ```json
-"object": {
+field:
+{
   "@label": "object",
   "@data": {
     "key1": {
-      "@label": "key1 Visualization",
-      "@default": "key1Value"
+      "@label": "key1 Visualization"
     },
     "key2": {
-      "@label": "key2 Visualization",
-      "@default": "key2Value"
+      "@label": "key2 Visualization"
     }
   }
+}
+value:
+{
+    "key1": "key1Value",
+    "key2": "key2Value"
 }
 ```
 
@@ -67,16 +75,17 @@ When the field is in object, you need to wrap the object in "@data" object.
 
 > Preview
 
-<img :src="$withBase('/images//visualization/object.png')" alt="foo">
+<VaffFieldsExample identifier="3" type="object"/>
 
 ------------
 
-## Array of Object
+### Array of Object
 
 > Json
 
 ```json
-"arrayObject": {
+field:
+{
   "@label": "Array of Object",
   "@data": [
     {
@@ -91,6 +100,17 @@ When the field is in object, you need to wrap the object in "@data" object.
     }
   ]
 }
+value:
+[
+    {
+        key1Item: "string",
+        key2Item: "string"
+    },
+    {
+        key1Item: "string",
+        key2Item: "string"
+    }
+]
 
 ```
 
@@ -104,77 +124,82 @@ When the field is an array of object, you need to wrap the array in "@data" obje
 
 > Preview
 
-<img :src="$withBase('/images//visualization/arrayOfObject.png')" alt="foo">
+<VaffFieldsExample identifier="4" type="arrayObject"/>
 
 ------------
 
-## Checkbox
+## With options
+
+### Checkbox
 
 > Json
 
 ```json
-"checkbox": {
+field:
+{
   "@label": "Chekbox Visualization",
-  "@default": true,
   "@options": {"displayAs": "checkbox"}
 }
+value: true
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/checkbox.png')" alt="foo">
+<VaffFieldsExample identifier="5" type="checkbox"/>
 
 ------------
 
-## Select
+### Select
 
-### Data as object
+#### Data as object
 
 > Json
 
 ```json
-"selectObject": {
+field
+{
   "@label": "Select Object Visualization",
-  "@default": 1,
   "@options": {"displayAs": "select", "data": [
     {"label": "Choice 1", "value": 1},
     {"label": "Choice 2", "value": 2},
     {"label": "Choice 2", "value": 3}
   ]}
 }
+value: 2
 ```
 
 **data:** Array of choice or Array of object: {"label": "choice 1", "value": "1"}
 
 > Preview
 
-<img :src="$withBase('/images//visualization/selectObject.png')" alt="foo">
+<VaffFieldsExample identifier="6" type="selectObject"/>
 
 ------------
 
-### Data as array
+#### Data as array
 
 > Json
 
 ```json
-"selectArray": {
+field:
+{
   "@label": "Select Array Visualization",
-  "@default": 1,
   "@options": {"displayAs": "select", "data": [1,2,3]}
 }
+value: 3
 ```
 
 **data:** Array of choice [1,2,3]
 
 > Preview
 
-<img :src="$withBase('/images//visualization/selectArray.png')" alt="foo">
+<VaffFieldsExample identifier="6" type="selectArray"/>
 
 ------------
 
-## Specific or general media
+### Specific or general media
 
 > Json
 
@@ -209,74 +234,85 @@ When the field is an array of object, you need to wrap the array in "@data" obje
   "@default": "images/loose.png",
   "@options": {"displayAs": "media"}
 }
-
+value: {
+    "image": "images/picture.png",
+    "sound": "sounds/sound.mp3",
+    "video": "videos/video.mp4",
+    "file": "files/data.json",
+    "media": "images/anything.png"
+}
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/media.png')" alt="foo">
+Preview is unavailable because media visualisation need configuration and a backend server.
+[See Media components documentation for more informations](/components/#media-components)
 
 ------------
 
-## Multiple Checkbox
+### Multiple Checkbox
 
 > Json
 
 ```json
-"multipleCheckbox": {
+field:
+{
   "@label": "Multiple Checkbox Visualization",
-  "@default": ["check1", "check4"],
   "@options": {"displayAs": "multiplecheckbox", "data": ["check1", "check2", "check3", "check4"]}
 }
-
+value: ["check1", "check4"],
 ```
 
 **data:** Array of choice possible to enable and disable or Array of object: {"label": "choice 1", "value": "1"}
 
 > Preview
 
-<img :src="$withBase('/images//visualization/multiplecheckbox.png')" alt="foo">
+<VaffFieldsExample identifier="7" type="multipleCheckbox"/>
 
 ------------
 
-## Number
+### Number
 
 > Json
 
 ```json
-"number": {
+field:
+{
   "@label": "Number Visualization",
   "@default": 42,
   "@options": {"displayAs": "number"}
 }
+value: 42
 ```
 
 **data:** Object with 1 key: step. For allowing float number. Default is 60
 
 > Preview
 
-<img :src="$withBase('/images//visualization/number.png')" alt="foo">
+<VaffFieldsExample identifier="8" type="number"/>
 
 ------------
+### Duration
 
-## DurationDays
+#### Days
 
 > Json
 
 ```json
-"durationDays": {
+field:
+{
   "@label": "Duration Days Visualization",
-  "@default": 25,
   "@options": {
     "displayAs": "duration",
     "data": {
       "periods" : ["years", "months", "days"],
       "min": 5,
-      "max": 50
+      "max": 800
     }
 }
+value: 455
 ```
 
 **data:** Object with 3 possible keys: "periods", "min" and "max":
@@ -295,16 +331,17 @@ When the field is an array of object, you need to wrap the array in "@data" obje
 
 > Preview
 
-<img :src="$withBase('/images//visualization/durationDays.png')" alt="foo">
+<VaffFieldsExample identifier="9" type="durationDays"/>
 
 ------------
 
-## DurationMinutes
+#### Minutes
 
 > Json
 
 ```json
-"durationMinutes": {
+field:
+{
   "@label": "Duration Minutes Visualization",
   "@default": 25,
   "@options": {
@@ -316,7 +353,7 @@ When the field is an array of object, you need to wrap the array in "@data" obje
         }
     }
 }
-
+value: 90
 ```
 
 **data:** Object with 3 possible keys: "periods", "min" and "max":
@@ -334,74 +371,77 @@ When the field is an array of object, you need to wrap the array in "@data" obje
 
 > Preview
 
-<img :src="$withBase('/images//visualization/durationMinutes.png')" alt="foo">
+<VaffFieldsExample identifier="10" type="durationMinutes"/>
 
 ------------
 
-## ReadOnly
+### ReadOnly
 
 > Json
 
 ```json
-"readOnly": {
+field:
+{
   "@label": "readOnly",
   "@hint": "",
   "@default": "foo",
   "@options": {"displayAs": "readonly"}
 }
+value: "foo"
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/readonly.png')" alt="foo">
+<VaffFieldsExample identifier="11" type="readOnly"/>
 
 ------------
 
-## Hidden
+### Hidden
 
 > Json
 
 ```json
-"hidden": {
+field: {
   "@label": "hidden",
-  "@hint": "",
-  "@default": "bar",
   "@options": {"displayAs": "hidden"}
 }
+value: "bar"
 ```
 
 **data:** Nothing
 
 > Preview
 
-**No Display**
+**No Preview**
+
+<VaffFieldsExample identifier="12" type="hidden"/>
 
 ------------
 
-## Password
+### Password
 
 > Json
 
 ```json
-"password": {
+field:
+{
   "@label": "password",
-  "@hint": "",
-  "@default": "mySecretPassword",
   "@options": {"displayAs": "password"}
 }
+value: "mySecretPassword",
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/password.png')" alt="foo">
+<VaffFieldsExample identifier="13" type="password"/>
 
 ------------
 
-## Datetime, Date and Time
+### Datetime, Date and Time
 
 > Json
 
@@ -414,78 +454,75 @@ When the field is an array of object, you need to wrap the array in "@data" obje
 }
 ```
 **data:** Object with three keys: type, format and dateFormat. Type can be date, datetime ot time depend of the element you want to see on the picker. Format is the date format you want when we update the value with the date picker. DateFormat is the format used to display the date on the label (please use only format like YYYY-MM-DD and not like YYYY-MM-DDTHH:mm:ssZ for this one).
+
 Ex: {"type": "date", "format": "DD-MM-YYYY", "dateFormat": "YYYY-MM-DD"}
      {"type": "datetime", "format: "DD-MM-YYYYTHH:mm:ss", "dateFormat": "YYYY-MM-DD"}
      {"type": "time", "format: "HH:mm:ss"}
 
 > Preview
 
-<img :src="$withBase('/images//visualization/datetime.png')" alt="foo">
-
-<img :src="$withBase('/images//visualization/datepicker.png')" alt="foo">
+<VaffFieldsExample identifier="14" type="date"/>
 
 ------------
 
-## Slider
+### Slider
 
 > Json
 
 ```json
-"slider": {
+field:
+{
   "@label": "slider",
-  "@hint": "",
-  "@default": 300,
   "@options": {"displayAs": "slider", "data": {"min": 100, "max": 1000, "step": 5}}
 }
+value: 300
 ```
 
 **data:** Object with 3 keys helping to define to slider parameters: max, min and step. Default: max: 100, min: 0, step: 1
 
 > Preview
 
-<img :src="$withBase('/images//visualization/slider.png')" alt="foo">
+<VaffFieldsExample identifier="15" type="slider"/>
 
 ------------
 
-## Textarea
+### Textarea
 
 > Json
 
 ```json
-"textarea": {
+field: {
   "@label": "textarea",
-  "@hint": "",
-  "@default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "@options": {"displayAs": "textarea"}
 }
-
+value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/textarea.png')" alt="foo">
+<VaffFieldsExample identifier="16" type="textarea"/>
 
 ------------
 
-## Color
+### Color
 
 > Json
 
 ```json
-"color": {
+field:
+{
   "@label": "color",
   "@hint": "",
   "@default": "#6A1BBD",
   "@options": {"displayAs": "color"}
 }
+value: "#6A1BBD"
 ```
 
 **data:** Nothing
 
 > Preview
 
-<img :src="$withBase('/images//visualization/color.png')" alt="foo">
-
-<img :src="$withBase('/images//visualization/colorPicker.png')" alt="foo">
+<VaffFieldsExample identifier="17" type="color"/>

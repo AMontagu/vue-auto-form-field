@@ -1,0 +1,91 @@
+
+th, td {
+    border: 1px solid #dfe2e5;
+    padding: 0 !important;
+}
+
+.custom-block.warning {
+    background-color: rgba(255,229,100,0.3) !important;
+    border-color: #e7c000 !important;
+    color: #6b5900 !important;
+}
+
+.application--wrap {
+    min-height: 0vh !important;
+}
+/*
+fallback
+https://github.com/google/material-design-icons/issues/786
+*/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/MaterialIcons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('/fonts/MaterialIcons/MaterialIcons-Regular.woff2') format('woff2'),
+    url('/fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'),
+    url('/fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url('/fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black'), url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url('/fonts/MyriadPro/MYRIADPRO-REGULAR.otf') format('opentype');
+    src: url('/fonts/MyriadPro/Myriad-Pro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Semibold';
+    src: url('/fonts/MyriadPro/MYRIADPRO-SEMIBOLD.otf') format('opentype');
+    src: url('/fonts/MyriadPro/Myriad-Pro-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('/fonts/MyriadPro/MYRIADPRO-BOLD.otf') format('opentype');
+    src: url('/fonts/MyriadPro/Myriad-Pro-Bold.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
