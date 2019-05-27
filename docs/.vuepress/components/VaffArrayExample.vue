@@ -2,7 +2,7 @@
 	<div>
 		<v-app light>
 			<vaff-props-form identifier="registerFormProps" v-model="propsValues"/>
-			<h3>Register form: </h3>
+			<h3>Complex Array form: </h3>
 			<Vaff
 				identifier="arrayForm"
 				:field="fields"

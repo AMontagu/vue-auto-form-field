@@ -7,9 +7,7 @@
 				identifier="registerForm"
 				:field="fields"
 				v-model="values"
-				:useDivider="propsValues.useDivider"
-				:visualStyle="propsValues.visualStyle"
-				:itemsPerRow="propsValues.itemsPerRow"
+				v-bind="propsValues"
 			/>
 		</v-app>
 	</div>

@@ -29,12 +29,12 @@ const tabs = {
                       displayIf: {
                         and: [
                           {
-                            comparaison: "equal",
+                            comparison: "equal",
                             value: 2,
                             path: "displayIf.simpleIfDisplay"
                           },
                           {
-                            comparaison: "equal",
+                            comparison: "equal",
                             value: 2,
                             path:
                               "displayIf.displayIfArray.[PLACEHOLDER].key1Item"
@@ -42,7 +42,7 @@ const tabs = {
                         ],
                         or: [
                           {
-                            comparaison: "equal",
+                            comparison: "equal",
                             value: 3,
                             path: "displayIf.simpleIfDisplay"
                           }
@@ -79,7 +79,7 @@ const tabs = {
           displayIf: {
             and: [
               {
-                comparaison: "equal",
+                comparison: "equal",
                 value: 2,
                 path: "displayIf.simpleIfDisplay"
               }
@@ -98,17 +98,17 @@ const tabs = {
           displayIf: {
             and: [
               {
-                comparaison: "greater",
+                comparison: "greater",
                 value: 10,
                 path: "displayIf.specificCondition"
               },
               {
-                comparaison: "less",
+                comparison: "less",
                 value: 20,
                 path: "displayIf.specificCondition"
               },
               {
-                comparaison: "notEqual",
+                comparison: "notEqual",
                 value: 15,
                 path: "displayIf.specificCondition"
               }

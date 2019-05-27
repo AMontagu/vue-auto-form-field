@@ -165,7 +165,7 @@ export default {
 									!this.checkCondition(
 										displayIfElement.value,
 										this.getDataByPath(fullPath),
-										displayIfElement.comparaison
+										displayIfElement.comparison
 									)
 								) {
 									display.and = false;
@@ -176,7 +176,7 @@ export default {
 									this.checkCondition(
 										displayIfElement.value,
 										this.getDataByPath(fullPath),
-										displayIfElement.comparaison
+										displayIfElement.comparison
 									)
 								) {
 									display.or = true;

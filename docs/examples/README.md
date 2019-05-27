@@ -12,4 +12,8 @@ sidebar: auto
 
 <VaffArrayExample/>
 
+## Conditional field
+
+<VaffConditionalExample/>
+
 

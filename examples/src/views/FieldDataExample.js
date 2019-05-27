@@ -26,19 +26,19 @@ const field = {
                   displayIf: {
                     and: [
                       {
-                        comparaison: "equal",
+                        comparison: "equal",
                         value: 2,
                         path: "simpleIfDisplay"
                       },
                       {
-                        comparaison: "equal",
+                        comparison: "equal",
                         value: 2,
                         path: "displayIfArray.[PLACEHOLDER].key1Item"
                       }
                     ],
                     or: [
                       {
-                        comparaison: "equal",
+                        comparison: "equal",
                         value: 3,
                         path: "simpleIfDisplay"
                       }
@@ -75,7 +75,7 @@ const field = {
       displayIf: {
         and: [
           {
-            comparaison: "equal",
+            comparison: "equal",
             value: 2,
             path: "simpleIfDisplay"
           }
@@ -94,17 +94,17 @@ const field = {
       displayIf: {
         and: [
           {
-            comparaison: "greater",
+            comparison: "greater",
             value: 10,
             path: "specificCondition"
           },
           {
-            comparaison: "less",
+            comparison: "less",
             value: 20,
             path: "specificCondition"
           },
           {
-            comparaison: "notEqual",
+            comparison: "notEqual",
             value: 15,
             path: "specificCondition"
           }
