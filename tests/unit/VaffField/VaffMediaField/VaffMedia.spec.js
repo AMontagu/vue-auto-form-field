@@ -2,13 +2,15 @@ import { mount, createLocalVue } from '@vue/test-utils';
 import VaffMedia from '@/components/VaffField/VaffMediaField/VaffMedia.vue';
 import Vuex from 'vuex';
 import Vue from 'vue';
+import Vuetify from 'vuetify';
 import VaffTools from '@/index';
 import axios from 'axios';
 import fixVuetifyDataAppWarnings from '../../fixVuetifyDataAppWarnings';
 import setupi18n from '../../helper/i18n';
 
 const localVue = createLocalVue();
-localVue.use(Vuex);
+Vue.use(Vuex);
+Vue.use(Vuetify);
 Vue.use(VaffTools, {
 	vaffMediaOptions: {
 		baseUrl: 'http://localhost:3000',
@@ -43,7 +45,7 @@ Vue.use(VaffTools, {
 });
 localVue.prototype.$http = axios;
 
-setupi18n(Vue);
+setupi18n(localVue);
 
 describe('VaffMedia.vue', () => {
 	fixVuetifyDataAppWarnings();
