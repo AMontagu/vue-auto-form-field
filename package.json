@@ -1,6 +1,6 @@
 {
   "name": "vue-auto-form-field",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "main": "dist/vue-auto-form-field.umd.min.js",
   "author": "Adrien Montagu <adrienmontagu@gmail.com> (https://www.linkedin.com/in/adrienmontagu/)",
