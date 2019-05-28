@@ -1,7 +1,10 @@
 {
   "name": "vue-auto-form-field",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/vue-auto-form-field.umd.min.js",
+  "author": "Adrien Montagu <adrienmontagu@gmail.com> (https://www.linkedin.com/in/adrienmontagu/)",
+  "keywords": ["vue", "form", "field", "auto-form", "auto-field", "json", "json-to-form", "dynamic-form", "dynamic-fied"],
   "scripts": {
     "serve": "vuepress dev docs",
     "build": "vue-cli-service build --target lib --name vue-auto-form-field ./src/index.js",
@@ -37,9 +40,35 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
+    "lint-staged": "^8.1.7",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21",
     "vuepress": "^0.14.11"
+  },
+  "homepage": "",
+  "license" : "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMontagu/vue-auto-form-field.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AMontagu/vue-auto-form-field/issues"
+  },
+  "files": [
+    "dist/*",
+    "*.json",
+    "*.js",
+    "README*",
+    "LICENSE"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }

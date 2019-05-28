@@ -1,6 +1,4 @@
 import * as VaffComponents from "./components";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
 import vaffStore from "./store/vaffStore";
 import objectPath from 'object-path';
 
@@ -51,8 +49,6 @@ const VueAutoFormField = {
       }
       return options.i18n.t(...keys);
     };
-
-    Vue.use(Vuetify);
     Object.values(VaffComponents).forEach(component => {
       Vue.use(component);
     });
