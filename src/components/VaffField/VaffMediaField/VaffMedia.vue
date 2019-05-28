@@ -324,13 +324,29 @@
             </v-flex>
           </v-layout>
 
-          <vaff-dialog-confirmation
-            v-model="showRemoveDialog"
-            :title="$vaffT('vaffField.vaffMediaField.vaffMedia.RemoveFile', {'fileName': selectedMediaFilename})"
-            :text="$vaffT('vaffField.vaffMediaField.vaffMedia.RemoveFileDescription', {'fileName': selectedMediaFilename})"
-            color="error"
-            @validation="deleteMediaConfirmation()"
-          />
+          <v-dialog v-model="showRemoveDialog" max-width="500px">
+            <v-card class="px-3 pt-3 pb-3">
+              <v-card-title :class="{'headline':$vuetify.breakpoint.xlOnly, 'title': $vuetify.breakpoint.lgAndDown}">{{ $vaffT('vaffField.vaffMediaField.vaffMedia.RemoveFile', {'fileName': selectedMediaFilename}) }}</v-card-title>
+              <v-card-text :class="{'subheading':$vuetify.breakpoint.xlOnly, 'body-1': $vuetify.breakpoint.lgAndDown}">{{ $vaffT('vaffField.vaffMediaField.vaffMedia.RemoveFileDescription', {'fileName': selectedMediaFilename}) }}</v-card-text>
+              <v-card-actions class="pt-5 pb-0">
+                <v-btn
+                  medium
+                  color="grey"
+                  flat
+                  depressed
+                  @click="showRemoveDialog = false"
+                > {{ $vaffT('vaffField.vaffMediaField.vaffMedia.Close') }} </v-btn>
+                <v-btn
+                  id="btnConfirmation"
+                  color="error"
+                  medium
+                  dark
+                  depressed
+                  @click="deleteMediaConfirmation()"
+                >{{ $vaffT('vaffField.vaffMediaField.vaffMedia.ConfirmText') }}</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-card>
       </v-flex>
     </v-layout>

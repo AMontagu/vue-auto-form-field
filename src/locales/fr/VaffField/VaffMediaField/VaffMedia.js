@@ -14,4 +14,6 @@ export default {
 	RemoveFile: 'Supprimer {fileName}',
 	GoBack: 'Retour au(x) média(s)',
 	RemoveFileDescription: 'Etes-vous sur de vouloir supprimer {fileName} ?',
+	Close: 'Fermer',
+	ConfirmText: 'Confirmer',
 };

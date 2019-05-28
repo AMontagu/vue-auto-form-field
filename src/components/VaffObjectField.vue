@@ -30,9 +30,9 @@
             :field="subField"
             :path="path ? `${path}.${subFieldName}` : subFieldName"
             v-bind="$props"
+            :items-per-rows="itemsPerRow"
             @input="emitInputObjectWhenOnlySubDataChanged(subFieldName, $event)"
             @deleteMedia="$emit('deleteMedia', $event)"
-            :items-per-rows="itemsPerRow"
           />
         </v-flex>
       </slot>

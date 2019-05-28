@@ -14,4 +14,6 @@ export default {
 	RemoveFile: 'Remove {fileName}',
 	GoBack: 'Go back to media',
 	RemoveFileDescription: 'Are you sur you want to remove {fileName}?',
+	Close: 'Close',
+	ConfirmText: 'Confirm',
 };
