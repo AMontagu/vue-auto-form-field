@@ -60,6 +60,8 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
+      - run: git config --global user.email "adrienmontagu@gmail.com"
+      - run: git config --global user.name "AMontagu"
       - run: ./deploy.sh
 
 workflows:
