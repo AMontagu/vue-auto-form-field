@@ -30,6 +30,34 @@ Vue.use(Vuetify);
 Vue.use(Vaff);
 ```
 
+- If you use Vuetify A la carte components here is the list of components needed by Vaff:
+```js
+import Vuetify, {
+	VApp,
+	VBtn,
+	VSnackbar,
+	VDivider,
+	VTextField,
+	VLayout,
+	VFlex,
+	VDialog,
+	VImg,
+	VIcon,
+	VSelect,
+	VSwitch,
+	VTooltip,
+	VSpacer,
+	VExpansionPanel,
+    VExpansionPanelContent,
+	VDatePicker,
+	VCard,
+	VMenu,
+	VSlider,
+	VTextarea,
+	VProgressCircular,
+} from 'vuetify/lib'
+```
+
 - Add the Vaff store to your store:
 ```js
 // store.js

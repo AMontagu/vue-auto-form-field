@@ -70,24 +70,6 @@
 </template>
 
 <script>
-// SSR compatible dropzone import
-var vue2Dropzone = {};
-if (process.browser) {
-	vue2Dropzone = require('vue2-dropzone/dist/vue2Dropzone.js')
-}
-vue2Dropzone.name = 'dropzone';
-vue2Dropzone.render = (createElement) => {
-	const that = this._self;
-	return createElement('div', {
-		props: that.props,
-		attrs: {
-			class: 'vue-dropzone dropzone',
-			id: that.id || ''
-		},
-		ref: 'dropzoneElement'
-	}, this.$slots.default)
-};
-
 import LoggerMixin from '../../LoggerMixin';
 // TODO remove next line after Leo's design
 import 'vue2-dropzone/dist/vue2Dropzone.min.css';
@@ -114,7 +96,7 @@ function getTemplate(previewWidth) {
 export default {
 	name: 'VaffMediaUpload',
 	components: {
-		vueDropzone: vue2Dropzone,
+		vueDropzone: () => import('../../../../node_modules/vue2-dropzone/dist/vue2Dropzone.js'),
 	},
 	mixins: [LoggerMixin],
 	props: {

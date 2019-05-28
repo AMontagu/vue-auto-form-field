@@ -74,3 +74,7 @@ export default {
 	}
 };
 </script>
+
+<style lang="scss">
+@import "./vuetifyNeeded.css";
+</style>

@@ -55,7 +55,7 @@ export default {
 				itemsPerRow: 1
 			},
 		};
-	}
+	},
 };
 </script>
 

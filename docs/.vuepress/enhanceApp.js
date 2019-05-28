@@ -1,6 +1,30 @@
 import VueAutoFormField from "../../src";
 import Vuex from 'vuex';
-import Vuetify from 'vuetify';
+import Vuetify, {
+	VApp,
+	VBtn,
+	VSnackbar,
+	VDivider,
+	VTextField,
+	VLayout,
+	VFlex,
+	VDialog,
+	VImg,
+	VIcon,
+	VSelect,
+	VSwitch,
+	VTooltip,
+	VSpacer,
+	VExpansionPanel,
+	VExpansionPanelContent,
+	VDatePicker,
+	VCard,
+	VMenu,
+	VSlider,
+	VTextarea,
+	VProgressCircular,
+} from 'vuetify/lib'
+//import Vuetify from 'vuetify';
 import "vuetify/dist/vuetify.min.css";
 
 import { vaffStore } from '../../src';
@@ -13,6 +37,30 @@ export default ({
 }) => {
 	Vue.use(Vuex)
 	Vue.use(Vuetify, {
+		components: {
+			VApp,
+			VBtn,
+			VSnackbar,
+			VDivider,
+			VTextField,
+			VLayout,
+			VFlex,
+			VDialog,
+			VImg,
+			VIcon,
+			VSelect,
+			VSwitch,
+			VTooltip,
+			VSpacer,
+			VExpansionPanel,
+			VExpansionPanelContent,
+			VDatePicker,
+			VCard,
+			VMenu,
+			VSlider,
+			VTextarea,
+			VProgressCircular,
+		},
 		theme: {
 			primary: '#3f51b5',
 			secondary: '#b0bec5',
