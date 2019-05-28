@@ -37,6 +37,7 @@ jobs:
       - run:
           name: yarn-version
           command: |
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             MESSAGE=`git log -1 --pretty=%B`
             MESSAGE=`echo $MESSAGE | grep -oP "tag=\K[^ ]+"`
             if [ -z "$MESSAGE" ]; then
