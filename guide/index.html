@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Guide | Vue auto form field documentation</title>
+    <meta name="description" content="The documentation for creation form field from json dynamically.">
+    
+    
+    <link rel="preload" href="/vue-auto-form-field/assets/css/0.styles.9d3ee320.css" as="style"><link rel="preload" href="/vue-auto-form-field/assets/js/app.d2d7bb57.js" as="script"><link rel="preload" href="/vue-auto-form-field/assets/js/12.e2dba885.js" as="script"><link rel="prefetch" href="/vue-auto-form-field/assets/js/10.8e0fefe6.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/11.d2f955fb.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/13.49704e55.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/2.c149a8d2.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/3.5076b412.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/4.aff29fcc.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/5.461cda3c.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/6.fbce7409.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/7.ac0fda0c.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/8.4bd9176f.js"><link rel="prefetch" href="/vue-auto-form-field/assets/js/9.7e00db77.js">
+    <link rel="stylesheet" href="/vue-auto-form-field/assets/css/0.styles.9d3ee320.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-auto-form-field/" class="home-link router-link-active"><!----> <span class="site-name">Vue auto form field documentation</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-auto-form-field/guide/" class="nav-link router-link-exact-active router-link-active">Guide</a></div><div class="nav-item"><a href="/vue-auto-form-field/components/" class="nav-link">Components</a></div><div class="nav-item"><a href="/vue-auto-form-field/fields/" class="nav-link">Fields</a></div><div class="nav-item"><a href="/vue-auto-form-field/examples/" class="nav-link">Examples</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue-auto-form-field/guide/" class="nav-link router-link-exact-active router-link-active">Guide</a></div><div class="nav-item"><a href="/vue-auto-form-field/components/" class="nav-link">Components</a></div><div class="nav-item"><a href="/vue-auto-form-field/fields/" class="nav-link">Fields</a></div><div class="nav-item"><a href="/vue-auto-form-field/examples/" class="nav-link">Examples</a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/vue-auto-form-field/guide/#introduction" class="sidebar-link">Introduction</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-auto-form-field/guide/#get-started" class="sidebar-link">Get Started</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-auto-form-field/guide/#vaff-global-options" class="sidebar-link">Vaff global options</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-auto-form-field/guide/#field-structure" class="sidebar-link">Field structure</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-auto-form-field/guide/#value-structure" class="sidebar-link">Value structure</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue-auto-form-field/guide/#translation" class="sidebar-link">Translation</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="guide"><a href="#guide" aria-hidden="true" class="header-anchor">#</a> Guide</h1> <h2 id="introduction"><a href="#introduction" aria-hidden="true" class="header-anchor">#</a> Introduction</h2> <p>Vue auto form field (Vaff) allow you to dynamically build form from json. The main advantage of Vaff is that it take complex json like array and object, even when nested.</p> <p>Its goal is to allow high user customization without a lot of html. One of the best example of application is admin back office. An other one is if user can add customizable content.</p> <p>Finally it add some form field out of the box as duration, date time, password ... To see the full list please <a href="/vue-auto-form-field/fields/">see fields</a></p> <h2 id="get-started"><a href="#get-started" aria-hidden="true" class="header-anchor">#</a> Get Started</h2> <ul><li>First add vue-auto-form-field to your dependencies:</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> vue-auto-form-field <span class="token comment"># or npm i vue-auto-form-field</span>
+</code></pre></div><ul><li>Tell Vue to use it and Vuetify:</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> Vaff <span class="token keyword">from</span> <span class="token string">'vue-auto-form-field'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Vuetify <span class="token keyword">from</span> <span class="token string">'vuetify'</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuetify<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vaff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>Add the Vaff store to your store:</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// store.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> vaffStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-auto-form-field'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  state<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    vaffStore<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>Enjoy your vaff components:</li></ul> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vaff</span>
+      <span class="token attr-name">identifier</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>firstForm<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:field</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fields<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>data<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">&quot;vaffView&quot;</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      fields<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+	      field1<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		      <span class="token string">&quot;@label&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Text input&quot;</span><span class="token punctuation">,</span>
+	      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+	      field2<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		      <span class="token string">&quot;@label&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Text input&quot;</span><span class="token punctuation">,</span>
+	      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        field1<span class="token punctuation">:</span> <span class="token string">&quot;first&quot;</span><span class="token punctuation">,</span>
+        field2<span class="token punctuation">:</span> <span class="token string">&quot;second&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="vaff-global-options"><a href="#vaff-global-options" aria-hidden="true" class="header-anchor">#</a> Vaff global options</h2> <p>When you tell vue to use Vaff you can passe some options like this:</p> <div class="language- extra-class"><pre class="language-text"><code>Vue.use(Vaff, {
+    i18n,
+    vaffMediaOptions,
+    vaffUploadOptions
+});
+</code></pre></div><table><thead><tr><th>options</th> <th>description</th></tr></thead> <tbody><tr><td>i18n</td> <td>Your vue-i18n instance to adapt text to the good context</td></tr> <tr><td>logLevel</td> <td>The debug level you want. 10 = debug, 20 = info, 30 = warning, 40 = error. Default is 30</td></tr> <tr><td>vaffMediaOptions</td> <td>Options needed if you want to use VaffMedia and allow user to pick up image, sound, video or file in your dynamically generated form. <a href="/vue-auto-form-field/components/#media-components">See VaffMedia options documentation</a></td></tr> <tr><td>vaffUploadOptions</td> <td>Options needed if you want to pass some security when you upload media with VaffMedia (deprecated will be pass in VaffMedia)</td></tr></tbody></table> <h2 id="field-structure"><a href="#field-structure" aria-hidden="true" class="header-anchor">#</a> Field structure</h2> <p>A field structure is a json composed of sub json object or array of json object.</p> <p>Each sub json object always has at least 1 key:</p> <p><strong>@label:</strong> The label of the input in the LAB</p> <p>3 others fields exist but are optional:</p> <p><strong>@hint:</strong> This is an extra description of the variable displayed in the LAB. Use it if the label is not enough to understand the meaning.</p> <p><strong>@options:</strong> A JSON object to configure the input visualization in the LAB. <a href="/vue-auto-form-field/fields/">See fields</a> for all the configuration possible.</p> <p><strong>@default:</strong> The default value of the variable when the sub json is in an array. Can be used to define initial value in database if you dynamically create table from field structure.</p> <h2 id="value-structure"><a href="#value-structure" aria-hidden="true" class="header-anchor">#</a> Value structure</h2> <p>The value structure from the field structure. But when field structure need a sub json object data only need the value to map the structure to an actual value.</p> <h2 id="translation"><a href="#translation" aria-hidden="true" class="header-anchor">#</a> Translation</h2> <p>In order to add a translation to your field structure, you have to transform the value to an object containing the different languages as keys.</p> <div class="language- extra-class"><pre class="language-text"><code>field1: {
+    &quot;@label&quot;: &quot;Text input&quot;,
+}
+</code></pre></div><p>become</p> <div class="language- extra-class"><pre class="language-text"><code>field1: {
+    &quot;@label&quot;: {
+        &quot;fr&quot;: &quot;Entrée texte&quot;,
+        &quot;en&quot;: &quot;Text input&quot;
+    },
+}
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/vue-auto-form-field/assets/js/app.d2d7bb57.js" defer></script><script src="/vue-auto-form-field/assets/js/12.e2dba885.js" defer></script>
+  </body>
+</html>
