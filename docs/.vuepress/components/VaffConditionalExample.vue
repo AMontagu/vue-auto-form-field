@@ -65,7 +65,7 @@ export default {
 				},
 				specificCondition: {
 					"@label": "Specific Condition",
-					"@hint": "Display an other field with a number between 10 and 20 expect 15",
+					"@hint": "Display an other field with a number between 10 and 20 except 15",
 					"@options": {displayAs: "number"}
 				},
 				specificConditionTarget: {
