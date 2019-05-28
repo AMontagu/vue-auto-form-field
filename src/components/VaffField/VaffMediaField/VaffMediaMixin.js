@@ -10,8 +10,8 @@ export default {
 	},
 	computed: {
 		options() {
-			return this.$vaffWebToolsOptions
-				? this.$vaffWebToolsOptions.vaffMediaOptions
+			return this.$vaffOptions
+				? this.$vaffOptions.vaffMediaOptions
 				: {};
 		},
 		getIdentifierDependOnOptions() {
@@ -32,10 +32,7 @@ export default {
 			});
 		},
 	},
-	created() {
-		//console.log(this.getMediaUrls);
-		//console.log(this.getStorageUrls);
-	},
+	created() {},
 	methods: {
 		findStorageByName(storageName) {
 			return this.options.storageConfigs.find(

@@ -14,7 +14,7 @@ const langToBCP47 = {
 
 const VueAutoFormField = {
   install(Vue, options) {
-    Vue.prototype.$vaffWebToolsOptions = options;
+    Vue.prototype.$vaffOptions = options;
 
     if (options && options.i18n) {
       options.i18n.mergeLocaleMessage("en", EnMessage);

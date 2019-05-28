@@ -7,13 +7,13 @@ const LOGERRORLEVEL = 40;
 export default {
 	computed: {
 		logLevel() {
-			return this.$vaffWebToolsOptions && this.$vaffWebToolsOptions.logLevel
-				? this.$vaffWebToolsOptions.logLevel
+			return this.$vaffOptions && this.$vaffOptions.logLevel
+				? this.$vaffOptions.logLevel
 				: defaultLogLevel;
 		},
 		logger() {
-			return this.$vaffWebToolsOptions && this.$vaffWebToolsOptions.logLevel
-				? this.$vaffWebToolsOptions.logLevel
+			return this.$vaffOptions && this.$vaffOptions.logLevel
+				? this.$vaffOptions.logLevel
 				: {
 						LOGDEBUG: this.LOGDEBUG,
 						LOGINFO: this.LOGINFO,
@@ -25,21 +25,25 @@ export default {
 	methods: {
 		LOGDEBUG(...arg) {
 			if (this.logLevel <= LOGDEBUGLEVEL) {
+				// eslint-disable-next-line
 				console.log('vaffWEBTOOLS: ', ...arg);
 			}
 		},
 		LOGINFO(...arg) {
 			if (this.logLevel <= LOGINFOLEVEL) {
+				// eslint-disable-next-line
 				console.log('vaffWEBTOOLS: ', ...arg);
 			}
 		},
 		LOGWARNING(...arg) {
 			if (this.logLevel <= LOGWARNINGLEVEL) {
+				// eslint-disable-next-line
 				console.warn('vaffWEBTOOLS: ', ...arg);
 			}
 		},
 		LOGERROR(...arg) {
 			if (this.logLevel <= LOGERRORLEVEL) {
+				// eslint-disable-next-line
 				console.error('vaffWEBTOOLS: ', ...arg);
 			}
 		},

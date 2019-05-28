@@ -122,13 +122,14 @@
 </template>
 
 <script>
-import MultiFieldMixin from './MultiFieldMixin';
+import MultiFieldMixin from './LoggerMixin';
+import LoggerMixin from './MultiFieldMixin';
 import { mapMutations } from 'vuex';
 import cloneDeep from 'lodash/cloneDeep';
 
 export default {
 	name: 'VaffArrayOfObjectField',
-	mixins: [MultiFieldMixin],
+	mixins: [MultiFieldMixin, LoggerMixin],
 	data() {
 		return {
 			expansionIndex: 0,
@@ -200,7 +201,7 @@ export default {
 		},
 		downloadJSON2CSV() {
 			if (!this.data.length) {
-				console.warn(`No data for ${this.fieldName} can't download it`);
+				this.LOGWARNING(`No data for ${this.fieldName} can't download it`);
 				return;
 			}
 

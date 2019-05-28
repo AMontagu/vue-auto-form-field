@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint src tests",
+    "serve": "vuepress dev docs",
+    "build": "vue-cli-service build --target lib --name vue-auto-form-field ./src/index.js",
+    "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "docs:dev": "vuepress dev docs",

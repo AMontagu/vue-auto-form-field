@@ -94,6 +94,7 @@ Vue.use(Vaff, {
 | options  |  description |
 |---|---|
 |  i18n |  Your vue-i18n instance to adapt text to the good context |
+|  logLevel |  The debug level you want. 10 = debug, 20 = info, 30 = warning, 40 = error. Default is 30 |
 |  vaffMediaOptions |  Options needed if you want to use VaffMedia and allow user to pick up image, sound, video or file in your dynamically generated form. [See VaffMedia options documentation](/components/#media-components)    |   |   |   |
 |  vaffUploadOptions |  Options needed if you want to pass some security when you upload media with VaffMedia (deprecated will be pass in VaffMedia) |
 
