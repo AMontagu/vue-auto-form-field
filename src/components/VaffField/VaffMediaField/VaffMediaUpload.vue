@@ -1,77 +1,94 @@
 <template>
-	<div class="vaffMediaUpload">
-		<div v-show="visualStyle === 'button'">
-			<v-btn
-				:class="{
+  <div class="vaffMediaUpload">
+    <div v-show="visualStyle === 'button'">
+      <v-btn
+        :class="{
           'body-2': $vuetify.breakpoint.lgAndUp,
           'caption': $vuetify.breakpoint.mdAndDown,
           'mr-0': $vuetify.breakpoint.smAndUp,
           'mt-2': $vuetify.breakpoint.xsOnly,
         }"
-				:block="$vuetify.breakpoint.xsOnly"
-				:large="$vuetify.breakpoint.xlOnly"
-				:medium="$vuetify.breakpoint.lgAndDown"
-				color="third"
-				depressed
-				dark
-				@click="openFileSelector"
-			>
-				<v-icon class="mr-2">
-					file_upload
-				</v-icon>
-				{{ label }}
-			</v-btn>
-			<input
-				v-show="false"
-				ref="fileInput"
-				:accept="acceptedFileTypes"
-				:multiple="allowMultiple"
-				type="file"
-				@change="addFile($event.target.files[0])"
-			>
-		</div>
+        :block="$vuetify.breakpoint.xsOnly"
+        :large="$vuetify.breakpoint.xlOnly"
+        :medium="$vuetify.breakpoint.lgAndDown"
+        color="third"
+        depressed
+        dark
+        @click="openFileSelector"
+      >
+        <v-icon class="mr-2">
+          file_upload
+        </v-icon>
+        {{ label }}
+      </v-btn>
+      <input
+        v-show="false"
+        ref="fileInput"
+        :accept="acceptedFileTypes"
+        :multiple="allowMultiple"
+        type="file"
+        @change="addFile($event.target.files[0])"
+      >
+    </div>
 
-		<vue-dropzone
-			v-show="visualStyle !== 'button'"
-			:id="randomId"
-			ref="vaffDropzone"
-			:options="dropzoneOptions"
-			:style="{height: dropzoneHeight, width: dropzoneWidth}"
-			class="vaffDropzone"
-			@vdropzone-file-added="addFile"
-			@vdropzone-error="handleError"
-		/>
+    <vue-dropzone
+      v-show="visualStyle !== 'button'"
+      :id="randomId"
+      ref="vaffDropzone"
+      :options="dropzoneOptions"
+      :style="{height: dropzoneHeight, width: dropzoneWidth}"
+      class="vaffDropzone"
+      @vdropzone-file-added="addFile"
+      @vdropzone-error="handleError"
+    />
 
-		<v-dialog
-			v-model="showModalError"
-			persistent
-			max-width="500px"
-		>
-			<v-card>
-				<v-card-title> {{ $vaffT('vaffField.vaffMediaField.vaffMediaUpload.Error') }}</v-card-title>
-				<v-layout px-4>
-					<v-flex xs12>
-						<p>{{ labelError }}</p>
-					</v-flex>
-				</v-layout>
-				<v-card-actions>
-					<v-btn
-						depressed
-						color="grey"
-						flat
-						@click="showModalError = false; uploadError = null;"
-					>
-						{{ $vaffT('vaffField.vaffMediaField.vaffMediaUpload.Close') }}
-					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog>
-	</div>
+    <v-dialog
+      v-model="showModalError"
+      persistent
+      max-width="500px"
+    >
+      <v-card>
+        <v-card-title> {{ $vaffT('vaffField.vaffMediaField.vaffMediaUpload.Error') }}</v-card-title>
+        <v-layout px-4>
+          <v-flex xs12>
+            <p>{{ labelError }}</p>
+          </v-flex>
+        </v-layout>
+        <v-card-actions>
+          <v-btn
+            depressed
+            color="grey"
+            flat
+            @click="showModalError = false; uploadError = null;"
+          >
+            {{ $vaffT('vaffField.vaffMediaField.vaffMediaUpload.Close') }}
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
 </template>
 
 <script>
+// SSR compatible dropzone import
+var vue2Dropzone = {};
+if (process.browser) {
+	vue2Dropzone = require('vue2-dropzone/dist/vue2Dropzone.js')
+}
+vue2Dropzone.name = 'dropzone';
+vue2Dropzone.render = (createElement) => {
+	const that = this._self;
+	return createElement('div', {
+		props: that.props,
+		attrs: {
+			class: 'vue-dropzone dropzone',
+			id: that.id || ''
+		},
+		ref: 'dropzoneElement'
+	}, this.$slots.default)
+};
+
 import LoggerMixin from '../../LoggerMixin';
-import vue2Dropzone from 'vue2-dropzone';
 // TODO remove next line after Leo's design
 import 'vue2-dropzone/dist/vue2Dropzone.min.css';
 

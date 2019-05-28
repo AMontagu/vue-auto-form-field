@@ -24,6 +24,7 @@ yarn add vue-auto-form-field # or npm i vue-auto-form-field
 // main.js
 import Vaff from 'vue-auto-form-field';
 import Vuetify from 'vuetify';
+import "vuetify/dist/vuetify.min.css";
 
 Vue.use(Vuetify);
 Vue.use(Vaff);
